@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Constructions>
+  <!--Item
+        ID: Defines ID for this construction referenced everywhere else
+        Prefix (optional): Used before the material in the name. Default is no Prefix
+        Name: Name of construction.  Format is "{Prefix} {Material} {Name}"
+        Description (optional): Description displayed when viewing this construction.
+                                Default is [AN_CONSTRUCTION_NAME]
+                                [CONSTRUCTION_NAME] in the description will be replaced with the name of the construction
+                                [AN_CONSTRUCTION_NAME] in the description will be replaced with the name of a or an followed by the name of the construction
+        ToolTip (optional): Used for the tool tip in the right click menu
+        GroupName (optional): Used in various places to describe the generic version when no specific material can be used.  Name is used if GroupName is omitted
+        Properties (optional)
+          Flags: BlocksLOS and/or BlocksMovement using a comma to separate.
+        Effect (optional):
+          Effect: EffectType.  Available options - Drink, Storage, Sleep, Sit, Surface, LightSource
+          Amount: Amount associated with Effect
+        Value (optional): Default 1.  This setting is multiplied by the combined value of all components
+        SpriteID: Supports arbitrary number of these which are rendered in order
+          SpriteID: Actual ID of sprite rendered
+          SpriteIDByMaterialID (optional): Supports arbitrary number of these.  Uses this sprite instead of SpriteID when construction is this material
+            Key: Material
+            Value: ID of sprite rendered
+          MaterialIndex (optional): Default 0. Component index used to determine material to tint this sprite.  A value of -1 will not tint the sprite.
+        StateSprite (optional): Sprites for special states
+          Key: Name of state
+          Value:
+            Item: Supports arbitrary number of these which are rendered in order
+              SpriteID: Actual ID of sprite rendered
+              SpriteIDByMaterialID (optional): Supports arbitrary number of these.  Uses this sprite instead of SpriteID when construction is this material
+                Key: Material
+                Value: ID of sprite rendered
+              MaterialIndex (optional): Default 0. Component index used to determine material to tint this sprite.  A value of -1 will not tint the sprite.
+        AnimFrame (optional): Represents 1 frame of an animation.  Animations loop. Not supported by all constructions.
+          SpriteID: Supports arbitrary number of these which are rendered in order
+            SpriteID: Actual ID of sprite rendered
+            SpriteIDByMaterialID (optional): Supports arbitrary number of these.  Uses this sprite instead of SpriteID when construction is this material
+              Key: Material
+              Value: ID of sprite rendered
+            MaterialIndex (optional): Default 0. Component index used to determine material to tint this sprite.  A value of -1 will not tint the sprite.
+          Time (seconds): Amount of time this frame is rendered before moving to the next frame.
+        Rotates (optional): Default false.  Determines if construction can be rotated when placed.  Must have associated sprites defined for each orientation.  Adds FR, FL, BR, BL to the end of the SpriteID
+        Destructible (optional): Default is false. Generates hitpoints for construction and allows damage to deconstruct it.  Currently only used for doors
+        Thickness (optional): Default is 1. Multiplier for hitpoints defined by material.  Only valid if Destructible is true
+        BuildAdjacent (optional): Default is false. Determines if gnome must stand adjacent to build job when constructing
+        RequiresFloor (optional): Default is true.  Allows construction to be built in the air if false
+        RequiresSupportWall (optional): Default is false. Requires neighboring wall if true.  ex When building a WallTorch it's only valid if there is a wall corresponding to the orientation
+        BlueprintID (optional): Default none.  Minimum research level before this construction can be built
+        Component: Components required to build this construciton. Supports an arbitrary number.
+          ItemID: ID of item required
+          Quantity (optional): Default is 1.  Quantity of ItemID required.
+          AllowedMaterial (optional): Default is all materials.  When this is added it restricts component to only items of these materials.  Supports an arbitrary number
+  -->
+  <!--Study-->
+  <Item>
+    <ID>Study</ID>
+    <Name>Study</Name>
+    <Value>3</Value>
+    <SpriteID>
+      <SpriteID>SelectionFloor</SpriteID>
+    </SpriteID>
+    <Component>
+      <ItemID>Table</ItemID>
+      <Quantity>3</Quantity>
+    </Component>
+    <Component>
+      <ItemID>Chair</ItemID>
+      <Quantity>1</Quantity>
+    </Component>
+    <Component>
+      <ItemID>Cabinet</ItemID>
+      <Quantity>3</Quantity>
+    </Component>
+  </Item>
+  <Item>
+    <ID>PrintingPress</ID>
+    <Name>Printing Press</Name>
+    <Value>3</Value>
+    <SpriteID>
+      <SpriteID>SelectionFloor</SpriteID>
+    </SpriteID>
+    <Component>
+      <ItemID>Workbench</ItemID>
+      <Quantity>1</Quantity>
+    </Component>
+    <Component>
+      <ItemID>Barrel</ItemID>
+      <Quantity>1</Quantity>
+    </Component>
+    <Component>
+      <ItemID>Cabinet</ItemID>
+      <Quantity>1</Quantity>
+    </Component>
+    <Component>
+      <ItemID>Chair</ItemID>
+      <Quantity>1</Quantity>
+    </Component>
+    <Component>
+      <ItemID>Furnace</ItemID>
+      <Quantity>1</Quantity>
+    </Component>
+  </Item>
+</Constructions>

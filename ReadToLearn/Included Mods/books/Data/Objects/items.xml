@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <!--Item
+        ID: Defines ID for this item referenced everywhere else
+        Prefix (optional): Used before the material in the name. Default is no Prefix
+        Name (optional): Displayed name of item.  Format is "{Prefix} {Material} {Name} {Suffix}"
+        Description (optional): Description displayed when viewing this item.
+                                Default is [AN_ITEM_NAME].
+                                [ITEM_NAME] in the description will be replaced with the name of the item
+                                [AN_ITEM_NAME] in the description will be replaced with the name of a or an followed by the name of the item
+        ObtainDescription (optional): Text displayed when hovering over "?" in workshop
+        GroupName (optional): Used in various places to describe the generic version when no specific material can be used.  Name is used if GroupName is omitted
+        Suffix (optional): Used after name.
+        Effect (optional)
+          Effect: EffectType.  Available options - Food, Drink, Storage, Rots, LightSource
+          Amount: Amount associated with Effect
+        Thickness (optional): Default 1. Multiplier for hitpoints defined by material.  Only valid for equipped items
+        TwoHanded (optional): Default is false.  Determines if two hands are required to carry
+        BaseValue (optional): Default is 0. Starting value of item.
+        Value (optional): Default is 1.  This setting is multiplied by the combined value of all components before being added to BaseValue
+        HasQuality (optional): Default is true.  Generates a quality when crafted
+        WeaponSize (optional): Default is 1. Used when determining damage in combat
+        CombatRatingModifier (optional): Default is 0.  Used to determine if a gnome is afraid of an enemy.  Higher values give more confidence
+        WeaponDef (optional)
+          Skill: Associated skill used for this weapon
+          AttackMove: Supports an arbitrary number of these
+            Verb: Used in combat log
+            SFXEventName (optional): sound effect that fires for this attack
+            AttackType: Type of attack.  Used for defending against this attack.  Available types - Swing, Thrust, HandToHand, Projectile
+            AttackTime (optional, seconds): Default is 3.  Time before another attack can be attempted after this one
+            AttackRange (optional) [min, max] values are in distance squared: Defines min and max distance attack can be used.
+            RequiresAmmo (optional): Default is false.  If true, requires ammo to be available and consumes on use
+            Weight (optional): Weight that this attack will be selected
+            MinimumSkillLevel (optional): Minimum skill level before this attack can be made
+            DamageScale (optional): Multiplier that scales damage for this attack
+            Damage:  Type of damage this weapon applies. Supports multiple.  Damage is applied in order listed.  ex, Claymore will first do slash damage then apply blunt damage.  If slash damage cuts through a layer (skin, muscle), blunt damage will be applied to the next layer
+          TargetedAttackMove (optional): Supports an arbitrary number
+            TargetedMaterial: Material which determines if this attack will be used
+            AttackDef:  AttackMove defined above
+          DefendMove (optional): Supports an arbitrary number
+            Verb: Used in combat log
+            SFXEventName (optional): sound effect that fires for this defend move        
+            DefendTime (optional, seconds): Default is 1.  Time before this weapon can be used to defend with again
+            AttackDelay (optional, seconds): Default is 1.  Delays next attack by this amount when defending.
+            DefendType: Supports an arbitrary number of these.  AttackType that this move can defend against
+          Point (optional): Default is 0.  Used for determining damage of pierce attacks
+          Edge (optional): Default is 0.   Used for determining damage of slash attacks
+          BluntModifier (optional): Default is 1. Used for determining damage of blunt attacks
+          ProjectileModifier (optional): Default is 1.  Used for determing damage of ranged attacks
+          VelocityModifier (optional): Default is 1.  Used for determining damage of melee attacks as well as difficulty to defend against this weapon
+          KnockbackModifier (optional): Default is 0.  Determines chance of knocking an enemy back when hit
+          AmmoItemID (optional): ItemID of ammo used by this weapon for ranged attacks
+        EquipSlot (optional): Defines where this item can be equipped.  Available values - Head, Body, Arm, Leg, Glove, Foot, Back
+        EquippedMovePenalty (optional): Default is 0.  Percent value that this item reduces movement by when equipped.  ex 10 reduces movement to 90% base
+        EquippedJobPenalty (optional): Default is 0.  Percent value that this item reduces job completion speed by when equipped.  ex 10 reduces job speed to 90% base
+        SpriteID: Supports arbitrary number of these which are rendered in order
+          SpriteID: Actual ID of sprite rendered
+          SpriteIDByMaterialID (optional): Supports arbitrary number of these.  Uses this sprite instead of SpriteID when item is this material
+            Key: Material
+            Value: ID of sprite rendered
+          MaterialIndex (optional): Default 0. Component index used to determine material to tint this sprite.  A value of -1 will not tint the sprite.
+        StateSprite (optional): Sprites for special states
+          Key: Name of state
+          Value:
+            Item: Supports arbitrary number of these which are rendered in order
+              SpriteID: Actual ID of sprite rendered
+              SpriteIDByMaterialID (optional): Supports arbitrary number of these.  Uses this sprite instead of SpriteID when construction is this material
+                Key: Material
+                Value: ID of sprite rendered
+              MaterialIndex (optional): Default 0. Component index used to determine material to tint this sprite.  A value of -1 will not tint the sprite.
+         EquippedSpriteID (optional): ID of sprite used when this item is equipped
+         EquippedDetailSpriteID (optional): Additional ID of sprite used when this item is equipped.  Will get merged with EquippedSpriteID in the future to allow for an arbitrary number of sprite IDs
+         HeldSpriteID (optional): Sprite used when this item is being carried
+          SpriteID: Actual ID of sprite rendered
+          SpriteIDByMaterialID (optional): Supports arbitrary number of these.  Uses this sprite instead of SpriteID when item is this material
+            Key: Material
+            Value: ID of sprite rendered
+          MaterialIndex (optional): Default 0. Component index used to determine material to tint this sprite.  A value of -1 will not tint the sprite.
+  -->
+
+  <Item>
+    <ID>Armorcraft</ID>
+    <Name>Armorcraft</Name>
+    <ObtainDescription>The ancient arts of forging defences</ObtainDescription>
+    <BaseValue>50</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Cooking</ID>
+    <Name>Cooking for Dummies</Name>
+    <ObtainDescription>How not to set the kitchen on fire</ObtainDescription>
+    <BaseValue>50</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Tailoring</ID>
+    <Name>A Good Suit</Name>
+    <ObtainDescription>Tips and tricks for the best ballroom attire</ObtainDescription>
+    <BaseValue>50</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Construction</ID>
+    <Name>Construction</Name>
+    <ObtainDescription>Do you even build?</ObtainDescription>
+    <BaseValue>50</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Engineering</ID>
+    <Name>Goblens and Gremlines</Name>
+    <ObtainDescription>The machinest's guide to machine crafting</ObtainDescription>
+    <BaseValue>250</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Healing</ID>
+    <Name>Combat Medicine</Name>
+    <ObtainDescription>How and when to remove arrows from knees</ObtainDescription>
+    <BaseValue>250</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Dodge</ID>
+    <Name>Why Didn't You DODGE</Name>
+    <ObtainDescription>Written by acclaimed author Mr.Piccolo</ObtainDescription>
+    <BaseValue>250</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>
+  <Item>
+    <ID>Weaponcraft</ID>
+    <Name>Pointy Sticks</Name>
+    <ObtainDescription>Guide to making weapons through the ages</ObtainDescription>
+    <BaseValue>500</BaseValue>
+	<Value>0</Value>
+    <HasQuality>false</HasQuality>
+    <SpriteID>
+      <SpriteID>Book</SpriteID>
+    </SpriteID>
+  </Item>  
+</Items>

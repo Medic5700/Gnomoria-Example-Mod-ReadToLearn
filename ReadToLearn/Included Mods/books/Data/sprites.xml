@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+  <!--Item
+        SpriteID: Defines ID for this sprite referenced everywhere else
+        SpritePath (optional): Default is default.png.  This is the path to the sprite file relative to the Sprites folder
+        SourceRectangle [x, y, width, height]: Rectangle into tilesheet for this sprite
+        Offset (optional): Local offset from cell position
+        SpriteEffect (optional): Default none.  Can be FlipHorizontally or FlipVertically
+  -->
+  <Item>
+    <SpriteID>Book</SpriteID>
+	<SpritePath>Book.png</SpritePath>
+    <SourceRectangle>0 0 32 32</SourceRectangle>
+    <Offset>0 -12</Offset>
+  </Item>
+</Sprites>

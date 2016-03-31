@@ -1,0 +1,36 @@
+﻿<WorkshopSettings>
+	<!--ConstructionIDToWorkshopID: Associates ConstructionID to a WorkshopID.
+        Item
+          Key: Construction ID
+          Value: Workshop ID
+  -->
+  <!--FloorSprite: Sprite used to indicate area covered by workshop
+          SpriteID: Supports an arbitrary number of these
+            SpriteID: Actual ID of sprite
+  -->
+  <!--SmeltItemID: ID of item that gets pulled out when smelting.  Randomly gets back half of this item used in crafted +- 25%-->
+  <!--ButcherShopID: Workshop ID of ButcherShop-->
+  <!--TinkerBenchID: Workshop ID of Tinker Bench-->
+  <!--MarketStallID: Workshop ID of Market Stall-->
+  <!--SmelterID: Workshop ID of Smelter-->
+  <!--ProspectorID: Workshop ID of Prospector-->
+  <!--TrainingGroundsID: Workshop ID of Training Grounds-->
+  <!--CoreItemIDsToMaterialIDs: Map of ItemIDs to weighted MaterialIDs for generating items with possible material options for items that aren't crafted
+        CoreItemIDToMaterialIDs:
+          Key: ItemID
+          Value:
+            Item:
+              MaterialID: MaterialID
+              Weight: Weight that this material is randomly chosen
+  -->
+  <ConstructionIDToWorkshopID>
+      <Item>
+		<Key>Study</Key>
+		<Value>Study</Value>
+	  </Item>
+      <Item>
+		<Key>PrintingPress</Key>
+		<Value>PrintingPress</Value>
+	  </Item>
+  </ConstructionIDToWorkshopID>
+</WorkshopSettings>

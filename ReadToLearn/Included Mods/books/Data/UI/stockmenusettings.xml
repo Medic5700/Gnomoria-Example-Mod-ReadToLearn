@@ -1,0 +1,42 @@
+﻿<StockMenuSettings>
+  <!--MenuItem: Used to build checkbox trees for various stock related UI windows
+        Text (optional): Displayed text.  Requires children and only used when no ItemID is set
+        MenuItem (optional): Creates children items. Recursively defined
+        ItemID (optional): ID of item used in relation to the UI
+  -->
+  <!--TrackedItems: Default tracked items
+        Name: Displayed name in HUD
+        TrackedItemID: ID of item to track.  Allows for multiple
+  -->
+  <!--goods-->
+  <MenuItem>
+	  <Text>goods</Text>
+	  <MenuItem>
+	    <Text>books</Text>
+	    <MenuItem>
+	      <ItemID>Armorcraft</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Cooking</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Tailoring</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Construction</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Engineering</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Healing</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Dodge</ItemID>
+	    </MenuItem>
+	    <MenuItem>
+	      <ItemID>Weaponcraft</ItemID>
+	    </MenuItem>
+	  </MenuItem>
+	</MenuItem>
+</StockMenuSettings>

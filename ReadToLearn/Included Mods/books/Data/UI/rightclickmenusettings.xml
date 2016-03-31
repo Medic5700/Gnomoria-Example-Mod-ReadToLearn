@@ -1,0 +1,36 @@
+﻿<RightClickMenuSettings>
+	<!--MenuItem: Used to build the right click menu
+      Text: Displayed text
+      ToolTip (optional): Displayed tool tip
+      MenuItem (optional): When set the Action is ignored.  Creates a child menu that extends from this MenuItem.  Recursively defined
+      Action (optional): Defines action when this MenuItem is selected.  All available options are used below
+  -->
+
+	<!--Build-->
+	<MenuItem>
+	  <Text>Build</Text>
+	  <!--Workshop-->
+	  <MenuItem>
+		<Text>Workshop</Text>
+		<MenuItem>
+		  <Text>Misc</Text>
+		  <!-- =========================================================================================== -->
+		  <MenuItem>
+			<Text>Study</Text>
+			<Action>
+			  <Type>BuildWorkshop</Type>
+			  <ID>Study</ID>
+			</Action>
+		  </MenuItem>
+		  <MenuItem>
+			<Text>Printing Press</Text>
+			<Action>
+			  <Type>BuildWorkshop</Type>
+			  <ID>PrintingPress</ID>
+			</Action>
+		  </MenuItem>
+		  <!-- =========================================================================================== -->
+		</MenuItem>
+	  </MenuItem>
+    </MenuItem>
+</RightClickMenuSettings>
